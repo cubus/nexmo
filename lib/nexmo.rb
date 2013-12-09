@@ -16,7 +16,7 @@ module Nexmo
         @json = JSON
       end
 
-      @http = Net::HTTP.new('rest.nexmo.com', Net::HTTP.https_default_port)
+      @http = Net::HTTP.new('rest.nexmo.com', Net::HTTP.http_default_port)
 
       @http.use_ssl = true
     end
