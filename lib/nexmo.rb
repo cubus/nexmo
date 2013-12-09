@@ -19,7 +19,7 @@ module Nexmo
       no_ssl = options.has_key?(:no_ssl) && options[:no_ssl]
       port = no_ssl ? Net::HTTP.http_default_port : Net::HTTP.https_default_port
 
-      @http = Net::HTTP.new('rest.nexmo.com', no_ssl)
+      @http = Net::HTTP.new('rest.nexmo.com', port)
 
       @http.use_ssl = true
     end
